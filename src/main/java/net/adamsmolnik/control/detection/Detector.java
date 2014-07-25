@@ -2,7 +2,7 @@ package net.adamsmolnik.control.detection;
 
 import java.io.IOException;
 import java.io.InputStream;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import net.adamsmolnik.entity.Entity;
 import net.adamsmolnik.entity.EntityReference;
@@ -12,7 +12,7 @@ import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.io.TikaInputStream;
 import org.apache.tika.metadata.Metadata;
 
-@RequestScoped
+@Dependent
 public class Detector {
 
     @Inject
