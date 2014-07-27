@@ -1,7 +1,7 @@
 package net.adamsmolnik.boundary.detection;
 
 import net.adamsmolnik.control.detection.Detector;
-import net.adamsmolnik.control.detection.MediaType;
+import net.adamsmolnik.entity.MediaType;
 import net.adamsmolnik.model.detection.DetectionRequest;
 import net.adamsmolnik.model.detection.DetectionResponse;
 

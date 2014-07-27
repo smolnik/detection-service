@@ -6,6 +6,7 @@ import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import net.adamsmolnik.entity.Entity;
 import net.adamsmolnik.entity.EntityReference;
+import net.adamsmolnik.entity.MediaType;
 import net.adamsmolnik.exceptions.ServiceException;
 import net.adamsmolnik.provider.EntityProvider;
 import org.apache.tika.detect.DefaultDetector;

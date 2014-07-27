@@ -36,7 +36,7 @@ public class DetectionService {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("detect")
     public DetectionResponse detect(DetectionRequest detectionRequest) {
-        net.adamsmolnik.control.detection.MediaType mt = detector.detect(detectionRequest.objectKey);
+        net.adamsmolnik.entity.MediaType mt = detector.detect(detectionRequest.objectKey);
         return new DetectionResponse(mt.getType(), mt.getSubType());
     }
 
