@@ -20,13 +20,11 @@ public class Detector {
     private EntityProvider entityProvider;
 
     public MediaType detect(String objectKey) {
-        EntityReference entityReference = new EntityReference(objectKey);
-        Entity entity = entityProvider.getEntity(entityReference);
+        Entity entity = entityProvider.getEntity(new EntityReference(objectKey));
         try (InputStream is = entity.getInputStream()) {
             DefaultDetector dd = new DefaultDetector();
             org.apache.tika.mime.MediaType mt = dd.detect(TikaInputStream.get(is), new Metadata());
             MediaType mediaType = new MediaType(mt.getType(), mt.getSubtype());
-            entityProvider.setNewMetadata(entityReference, "mediaType", mediaType.toString());
             return mediaType;
         } catch (IOException e) {
             throw new ServiceException(e);
